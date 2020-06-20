@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <section class="hero is-fullheight">
+        <div id="content">
+          <div class="tile is-ancestor is-2">
+            <div class="container has-text-centered">
+              <div class="container">
+                <h2>Is</h2>
+                <h1 class="title" id="name">{{ objs[curr].title }}</h1>
+              </div>
+              <div class="container is-fullhd">
+                <nav class="level is-mobile">
+                  <div class="level-item has-text-centered">
+                    <b-button @click="checkAxe">Axe?</b-button>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <h2>or</h2>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <b-button @click="checkIntel">Intel?</b-button>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="hero is-fullheight">
+        <div
+          style="
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="tile is-ancestor is-4">
+            <div class="tile is-vertical">
+                <div class="container">
+                    <h2>Is</h2>
+                    <h1 class="title">Ice Lake</h1>
+                  </div>
+                  <div class="container is-fullhd">
+                  <nav class="level is-mobile">
+                    <div class="level-item has-text-centered ">
+                      <b-button class="mx-6">Axe?</b-button>
+                  </div>
+                      <div class="level-item has-text-centered ">
+                      <h2>or</h2>
+                  </div>
+                      <div class="level-item has-text-centered ">
+                      <b-button>Intel?</b-button>
+                  </div>
+                    </div>
+                  </nav>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Full bundle -->
+    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+    <!-- Individual components -->
+    <script src="https://unpkg.com/buefy/dist/components/table"></script>
+    <script src="https://unpkg.com/buefy/dist/components/input"></script>
+
+    <script>
+      shuffle = (array) => {
+        var currentIndex = array.length,
+          temporaryValue,
+          randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+      };
+
+      let vm = new Vue({
+        el: "#app",
+        data: {
+          curr: 0,
+          objs: [],
+          counter: 0,
+        },
+        methods: {
+          checkAxe() {
+            this.check(true);
+          },
+          checkIntel() {
+            this.check(false);
+          },
+          goAgain() {
+            if (this.curr == this.objs.length - 1) {
+              let results =
+                "You got " +
+                this.counter +
+                " of " +
+                this.objs.length +
+                " correct! Would you like to go again?";
+              this.$buefy.dialog.confirm({
+                message: results,
+                confirmText: "Yes!",
+                cancelText: "No fuck this",
+                onConfirm: () => this.reset(),
+                onCancel: () => (window.location.href = "http://axe.com"),
+              });
+            } else this.curr++;
+          },
+          reset() {
+            this.curr = 0;
+            this.counter = 0;
+            this.objs = shuffle(this.objs);
+          },
+          check(isAxe) {
+            let innertext =
+              '<img src="./assets/' +
+              this.objs[this.curr].img +
+              '"></img><br>' +
+              this.objs[this.curr].description;
+
+            if (isAxe == this.objs[this.curr].isAxe) {
+              this.counter++;
+              this.$buefy.dialog.alert({
+                title: "You're correct!",
+                message: innertext,
+                confirmText: "Again!",
+                onConfirm: () => this.goAgain(),
+              });
+            } else {
+              this.$buefy.dialog.alert({
+                title: "You're wrong!",
+                message: innertext,
+                confirmText: "Again!",
+                type: "is-danger",
+                onConfirm: () => this.goAgain(),
+              });
+            }
+          },
+        },
+        created() {
+          fetch("./names.json")
+            .then((response) => response.json())
+            .then((json) => {
+              this.objs = shuffle(json);
+            });
+        },
+      });
+    </script>
+    <style>
+      #content {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      #name {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .modal-card {
+        text-align: center;
+      }
+      .media {
+        align-items: center;
+      }
+      .media-content {
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

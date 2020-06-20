@@ -1,0 +1,183 @@
+[
+  {
+    "title": "Ice Lake",
+    "img": "icelake.jpeg",
+    "description": "Ice Lake is Intel's codename for the 10th generation Intel Core processors.",
+    "isAxe": false
+  },
+  {
+    "title": "Whiskey Lake",
+    "img": "whiskeylake.png",
+    "description": "Whiskey Lake is Intel's codename for the third 14 nm Skylake process-refinement.",
+    "isAxe": false
+  },
+  {
+    "title": "Athena",
+    "img": "athena.jpeg",
+    "description": "Project Athena is a code name for Intel’s Innovation Program.",
+    "isAxe": false
+  },
+  {
+    "title": "Apollo",
+    "img": "apollo.jpeg",
+    "description": "Apollo is a kind of Axe bodyspray.",
+    "isAxe": true
+  },
+  {
+    "title": "Phoenix",
+    "img": "phoenix.jpeg",
+    "description": "Phoenix is a kind of Axe bodyspray.",
+    "isAxe": true
+  },
+  {
+    "title": "Dark Temptation",
+    "img": "dark.jpeg",
+    "description": "Dark Temptation is a kind of Axe bodyspray.",
+    "isAxe": true
+  },
+  {
+    "title": "Alaska",
+    "img": "alaska.jpeg",
+    "description": "Alaska is a kind of Axe bodyspray.",
+    "isAxe": true
+  },
+  {
+    "title": "Excite",
+    "img": "excite.jpeg",
+    "description": "Excite is a kind of Axe bodyspray.",
+    "isAxe": true
+  },
+  {
+    "title": "Anarchy",
+    "img": "anarchy.png",
+    "description": "Anarchy is a kind of Axe bodyspray.",
+    "isAxe": true
+  },
+  {
+    "title": "Ice Chill",
+    "img": "icechill.png",
+    "description": "Ice Chill is a kind of Axe deodorant.",
+    "isAxe": true
+  },
+  {
+    "title": "Armor",
+    "img": "armor.jpeg",
+    "description": "Armor is a kind of Axe shampoo.",
+    "isAxe": true
+  },
+  {
+    "title": "Sport Blast",
+    "img": "sportblast.jpeg",
+    "description": "Sport Blast is a kind of Axe shower gel.",
+    "isAxe": true
+  },
+
+  {
+    "title": "Thunderbolt",
+    "img": "thunderbolt.png",
+    "description": "Thunderbolt is the brand name of a hardware interface developed by Intel.",
+    "isAxe": false
+  },
+  {
+    "title": "Alpine Ridge",
+    "img": "alpine.jpeg",
+    "description": "Alpine Ridge is the codename for Intel's Thunderbolt 3 controller.",
+    "isAxe": false
+  },
+  {
+    "title": "Xpoint",
+    "img": "xpoint.png",
+    "description": "3D XPoint is a non-volatile memory (NVM) technology developed jointly by Intel and Micron Technology.",
+    "isAxe": false
+  },
+  {
+    "title": "Warm Springs",
+    "img": "warmsprings.jpeg",
+    "description": "Warm Springs is the codename for the Intel WS440BX motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Sharkey",
+    "img": "sharkey.jpeg",
+    "description": "Sharkey is the codename for the Intel D915PSY motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Sea Breeze",
+    "img": "seabreeze.jpeg",
+    "description": "Sea Breeze is the codename for the Intel D845GVSR motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Polaris",
+    "img": "polaris.png",
+    "description": "Polaris is Intel's Teraflops Research Chip, an experimental 80-core processor.",
+    "isAxe": false
+  },
+  {
+    "title": "Mars",
+    "img": "mars.gif",
+    "description": "Mars is the codename for the Intel 450KX chipset.",
+    "isAxe": false
+  },
+  {
+    "title": "Fiji",
+    "img": "fiji.jpg",
+    "description": "Fiji is the codename for the Intel FJ440ZX motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Decathlete",
+    "img": "clearwater.jpeg",
+    "description": "Decathlete is Intel's specification for enterprise-ready two-socket motherboards based on the Xeon E5-2600 processor.",
+    "isAxe": false
+  },
+  {
+    "title": "Clearwater",
+    "img": "clearwater.jpeg",
+    "description": "Clearwater is the codename for the Intel SE7500CW2 two-socket server motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Chilito",
+    "img": "chilito.jpeg",
+    "description": "Chilito is the codename for the Intel SRCU42L integrated RAID controller.",
+    "isAxe": false
+  },
+  {
+    "title": "Bonetrail",
+    "img": "bonetrail.jpeg",
+    "description": "Bonetrail is the codename for the Intel DX38BT Extreme Series motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Bonanza",
+    "img": "bonanza.jpeg",
+    "description": "Bonanza is the codename for the Intel D875PBZ motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Blue Mountain",
+    "img": "bluemountain.jpeg",
+    "description": "Blue Mountain is the codename for the Intel D845EBT motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Batman's Revenge",
+    "img": "batmansrevenge.png",
+    "description": "Batman's Revenge is the codename for the Intel Premiere/PCI ED motherboard with support for the 66 MHz Pentium.",
+    "isAxe": false
+  },
+  {
+    "title": "Bad Axe 2",
+    "img": "badaxe2.jpeg",
+    "description": "Bad Axe 2 is the codename for the Intel D975XBX2 enthusiast motherboard.",
+    "isAxe": false
+  },
+  {
+    "title": "Anchor Creek",
+    "img": "anchorcreek.jpeg",
+    "description": "Anchor Creek is Intel's desktop platform combining the Pentium D (Smithfield) CPU with the 945G (Lakeport) and 955X (Glenwood) chipsets.",
+    "isAxe": false
+  }
+]
